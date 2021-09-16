@@ -1,11 +1,4 @@
-/* body {
-  font-family: "Lato", sans-serif;
-} */
-
 .sidenav {
-  /* height: 100%;
-    width: 160px; 
-    position: fixed;*/
   z-index: 1;
   top: 0;
   left: 0;
@@ -13,13 +6,8 @@
   overflow-x: hidden;
   padding-top: 20px;
   position: absolute;
-
   width: 90px;
   height: 2468px;
-  /* left: 0px;
-    top: 0px; */
-
-  /* background-color: #222222; */
 }
 
 .sidenav a {
@@ -32,7 +20,6 @@
 
 .sidenav a:hover {
   color: #60ca9a;
-  /* color:  linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);; */
 }
 
 .main {
@@ -50,108 +37,57 @@
   }
 }
 
-/* .center {
-  margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
-  padding: 10px;
-} */
 .menu {
   position: absolute;
   width: 28px;
   height: 28px;
   left: 28px;
   top: 19px;
-
-  /* background: url(image.png); */
 }
 
 .home {
   position: absolute;
-  /* left: 2.29%;
-    right: 96.04%; */
   margin-top: 40px;
   left: 28px;
   width: 28px;
   height: 28px;
-  /* top: 4.74%;
-    bottom: 94.21%; */
-  /* Shade - 2 */
-
-  /* background-color: #BDBDBD; */
 }
 
 .sqmenu {
   position: absolute;
   width: 28px;
   height: 28px;
-  /* left: 2.38%;
-    right: 96.12%;
-    top: 8.47%;
-    bottom: 90.59%; */
   margin-top: 10px;
   left: 28px;
-
-  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
-    border-radius: 10px; */
 }
 .meter {
   position: absolute;
   width: 28px;
   height: 28px;
-  /* left: 2.38%;
-    right: 96.12%;
-    top: 8.47%;
-    bottom: 90.59%; */
   margin-top: 20px;
   left: 28px;
-
-  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
-    border-radius: 10px; */
 }
 .dashboard {
   position: absolute;
   width: 28px;
   height: 28px;
-  /* left: 2.38%;
-    right: 96.12%;
-    top: 8.47%;
-    bottom: 90.59%; */
   margin-top: 30px;
   left: 28px;
-
-  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
-    border-radius: 10px; */
 }
 .data {
   position: absolute;
   width: 28px;
   height: 28px;
-  /* left: 2.38%;
-    right: 96.12%;
-    top: 8.47%;
-    bottom: 90.59%; */
   margin-top: 170px;
   left: 28px;
-
-  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
-    border-radius: 10px; */
 }
 .alerts {
   position: absolute;
   width: 28px;
   height: 28px;
-  /* left: 2.38%;
-    right: 96.12%;
-    top: 8.47%;
-    bottom: 90.59%; */
   margin-top: 10px;
   left: 28px;
-
-  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
-    border-radius: 10px; */
 }
-/* ///////////////////////////////////////////////////////// */
 
 * {
   box-sizing: border-box;
@@ -181,23 +117,16 @@
 
 /* Style the search box */
 #mySearch {
-  /* width: 100%; */
   font-size: 10px;
   padding: 11px;
-  /* border-radius: 5px;
-    border: 1px solid rgb(22, 14, 14); */
-
   position: absolute;
   width: 212px;
   height: 40px;
   left: 138px;
   top: 221px;
-
   /* White */
-
   background: #ffffff;
   /* Shade - 2 */
-
   border: 1px solid #bdbdbd;
   box-sizing: border-box;
   border-radius: 6px;
@@ -227,16 +156,13 @@
   height: 18px;
   left: 138px;
   top: 188px;
-
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   /* identical to box height, or 129% */
-
   /* Dark - main */
-
   color: #222222;
 }
 
@@ -469,8 +395,6 @@ ul li::before {
   margin-left: -1em;
 }
 
-/* ////////////// */
-
 .collapsible:after {
   content: "\002B";
   color: black;
@@ -490,7 +414,7 @@ ul li::before {
   transition: max-height 0.2s ease-out;
 }
 .card1 {
-    margin: auto;
+  margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 286px;
@@ -658,9 +582,9 @@ ul li::before {
   border-radius: 50%;
 }
 .table2 {
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 600px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600px;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -672,6 +596,18 @@ ul li::before {
   text-align: center;
   font-size: 14px;
   padding: 16px;
+}
+
+.th1,
+.td1 {
+  text-align: center;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.th1:first-child,
+.td1:first-child {
+  text-align: left;
 }
 
 .th2:first-child,
