@@ -1,0 +1,710 @@
+/* body {
+  font-family: "Lato", sans-serif;
+} */
+
+.sidenav {
+  /* height: 100%;
+    width: 160px; 
+    position: fixed;*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position: absolute;
+
+  width: 90px;
+  height: 2468px;
+  /* left: 0px;
+    top: 0px; */
+
+  /* background-color: #222222; */
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #60ca9a;
+  /* color:  linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);; */
+}
+
+.main {
+  margin-left: 350px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* .center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+} */
+.menu {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 28px;
+  top: 19px;
+
+  /* background: url(image.png); */
+}
+
+.home {
+  position: absolute;
+  /* left: 2.29%;
+    right: 96.04%; */
+  margin-top: 40px;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  /* top: 4.74%;
+    bottom: 94.21%; */
+  /* Shade - 2 */
+
+  /* background-color: #BDBDBD; */
+}
+
+.sqmenu {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* left: 2.38%;
+    right: 96.12%;
+    top: 8.47%;
+    bottom: 90.59%; */
+  margin-top: 10px;
+  left: 28px;
+
+  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
+    border-radius: 10px; */
+}
+.meter {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* left: 2.38%;
+    right: 96.12%;
+    top: 8.47%;
+    bottom: 90.59%; */
+  margin-top: 20px;
+  left: 28px;
+
+  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
+    border-radius: 10px; */
+}
+.dashboard {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* left: 2.38%;
+    right: 96.12%;
+    top: 8.47%;
+    bottom: 90.59%; */
+  margin-top: 30px;
+  left: 28px;
+
+  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
+    border-radius: 10px; */
+}
+.data {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* left: 2.38%;
+    right: 96.12%;
+    top: 8.47%;
+    bottom: 90.59%; */
+  margin-top: 170px;
+  left: 28px;
+
+  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
+    border-radius: 10px; */
+}
+.alerts {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* left: 2.38%;
+    right: 96.12%;
+    top: 8.47%;
+    bottom: 90.59%; */
+  margin-top: 10px;
+  left: 28px;
+
+  /* background: linear-gradient(86.76deg, #DEFB9D 11.13%, #71F79E 41.78%, #38F9D7 69%, #89C4FE 97.87%);
+    border-radius: 10px; */
+}
+/* ///////////////////////////////////////////////////////// */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  margin-left: 83px;
+  flex: 90%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  /* width: 100%; */
+  font-size: 10px;
+  padding: 11px;
+  /* border-radius: 5px;
+    border: 1px solid rgb(22, 14, 14); */
+
+  position: absolute;
+  width: 212px;
+  height: 40px;
+  left: 138px;
+  top: 221px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Shade - 2 */
+
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#myMenu li a:hover {
+  color: #60ca9a;
+  background-color: #effaf5;
+}
+
+.sch {
+  position: absolute;
+  width: 109px;
+  height: 18px;
+  left: 138px;
+  top: 188px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  /* Dark - main */
+
+  color: #222222;
+}
+
+.dau {
+  padding: 12px;
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 114px;
+  top: 290px;
+
+  /* Accent-Shade/Green */
+
+  background: #effaf5;
+}
+
+.avg {
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 114px;
+  top: 358px;
+
+  /* Sub Title 2 - Regular */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+.value {
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 114px;
+  top: 406px;
+
+  /* Sub Title 2 - Regular */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+.order {
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 114px;
+  top: 454px;
+
+  /* Sub Title 2 - Regular */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+.revenue {
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 114px;
+  top: 502px;
+
+  /* Sub Title 2 - Regular */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.topic {
+  position: static;
+  width: 78px;
+  height: 16px;
+  left: 12px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+
+  /* Dark - main */
+
+  color: #222222;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+.mean {
+  position: static;
+  width: 32px;
+  height: 14px;
+  left: 11px;
+  top: 0px;
+
+  /* Overline/Nav bar title */
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  /* identical to box height, or 117% */
+
+  text-align: right;
+  letter-spacing: 0.2px;
+
+  color: #7a7a7a;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 18px 0px;
+}
+.frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7.5px 12px;
+
+  position: absolute;
+  width: 210px;
+  height: 32px;
+  left: 750px;
+  top: -50px;
+
+  /* Shade - 3 */
+
+  background: #f0efef;
+  border-radius: 6px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 500px;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-third {
+  float: left;
+  width: 100%;
+}
+.tab-third {
+  width: 33.33333%;
+}
+.tab-bottombar {
+  border-bottom: 6px solid #ccc !important;
+}
+.tab-hover-light-grey:hover {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+}
+.tab-padding {
+  padding: 8px 16px !important;
+}
+
+.tab-container,
+.tab-panel {
+  padding: 0.01em 16px;
+}
+.tab-panel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.tab-container:after,
+.tab-container:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-border-colour,
+.tab-hover-border-red:hover {
+  border-color: #60ca9a !important;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #60ca9a;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* ////////////// */
+
+.collapsible:after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.card1 {
+    margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 286px;
+  height: 290px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container1 {
+  padding: 2px 16px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal column1s that floats next to each other */
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the column1s */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-third1 {
+  float: left;
+  width: 100%;
+}
+.tab-third1 {
+  width: 10%;
+  word-spacing: 20px;
+  margin: 5px;
+  font-size: 20px;
+}
+.tab-bottombar11 {
+  border-bottom: 6px solid #ccc !important;
+}
+.tab-hover-light-grey1:hover {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+}
+.tab-padding1 {
+  padding: 8px 16px !important;
+}
+
+.tab-container11,
+.tab-panel1 {
+  padding: 0.01em 16px;
+}
+.tab-panel1 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.tab-container11:after,
+.tab-container11:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-border-colour1,
+.tab-hover-border-red1:hover {
+  border-color: #60ca9a !important;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #60ca9a;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.img1 {
+  width: 56px;
+  height: 56px;
+  left: 475px;
+  margin-top: 25px;
+  border-radius: 100px;
+  height: 50px;
+}
+.btn1 {
+  border-radius: 10px;
+  margin: auto;
+  align-items: center;
+  height: 28px;
+  top: 34px;
+  width: 150px;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tabl {
+  margin-top: 80px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.table2 {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.th2,
+.td2 {
+  text-align: center;
+  font-size: 14px;
+  padding: 16px;
+}
+
+.th2:first-child,
+.td2:first-child {
+  text-align: left;
+}
+.in1 {
+  /* position: absolute; */
+  width: 487.38px;
+  height: 48px;
+  left: 458.31px;
+  top: 1742px;
+  text-align: center;
+  background: #ffffff;
+  /* Shade - 2 */
+
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.collapsible {
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.exp1 {
+  margin-top: 5px;
+}
+.table1 {
+  margin-top: 30px;
+}

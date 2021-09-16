@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <body>
+    <div style="float: right; margin-top: 30px;">
+        <span><img src="images/mathew.png" alt="" style="border-radius: 100px;width: 15px;height: 15px;"></span>
+        <select name="Multidimentional" id="">
+          <option value="" selected="selected">mathew.thomas@gmail.com</option>
+        </select>
+        <p style="color: silver;font-size: 16px;margin-top: 0px; margin-left: 20px;">Admin</p>
+      </div>
+    <div class="sidenav center">
+      <!-- <a href="" ><i class="fa fa-bars" style="font-size:28px;left: 28px;"></i></a> -->
+      <a href=""><img src="images/menu.png" alt="" class="menu" /></a>
+      <a href="">
+        <img src="images/home.png" alt="" class="home" />
+        <p style="margin-top: 70px; margin-left: 10px">Home</p>
+      </a>
+      <a href="">
+        <img src="images/sqmenu.png" alt="" class="sqmenu" />
+        <p style="margin-top: 40px">Dashboard</p>
+      </a>
+      <a href="">
+        <img src="images/meter.png" alt="" class="meter" />
+        <p style="margin-top: 50px">KPI Explorer</p>
+      </a>
+      <a href="">
+        <img src="images/dashboard.png" alt="" class="dashboard" />
+        <p style="margin-top: 60px">Anamolies</p>
+      </a>
+      <a href="">
+        <img src="images/data.png" alt="" class="data" />
+        <p style="margin-top: 200px">Data Source</p>
+      </a>
+      <a href="">
+        <img src="images/alerts.png" alt="" class="alerts" />
+        <p style="margin-top: 40px">Data Source</p>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="left" style="background-color: rgb(255, 255, 255)">
+        <p class="sch">List of KPI's (08)</p>
+        <input
+          type="text"
+          id="mySearch"
+          onkeyup="myFunction()"
+          placeholder="Search KPI"
+          class="search"
+        />
+        <ul id="myMenu">
+          <li><a href="#" class="dau">DAU's</a></li>
+          <li><a href="#" class="avg">Avg Engagements (Min)</a></li>
+          <li><a href="#" class="value">Order Value</a></li>
+          <li><a href="#" class="order">Orders</a></li>
+          <li><a href="#" class="revenue">Revenue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+        
+      <p style="font-size: 14px;"><a href="#" style="color: #0597F2;">Dashboard</a>/<a href="#" style="color: #0597F2;">Test Dashboard</a>/<a href="#" style="color: black;">AutoRCA</a></p>
+      <div class="tab-container">
+        <div class="w3-row">
+          <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+            <div
+              class="
+                tab-third
+                tablink
+                tab-bottombar tab-hover-light-grey tab-padding
+              "
+              style="color: #60ca9a"
+            >
+              AutoRCA
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+            <div
+              class="
+                tab-third
+                tablink
+                tab-bottombar tab-hover-light-grey tab-padding
+              "
+              style="color: black"
+            >
+              Anomolies
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="tablink"
+            onclick="openCity(event, 'Tokyo');"
+          >
+            <div>
+              <button style="float: right; margin-right: 20px">
+                <span class="fa fa-cog"></span>Settings
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div id="London" class="tab-container city" style="display: none">
+          <div class="row">
+            <div class="column">
+              <table class="table1">
+                <tr class="topic">
+                  <th></th>
+                  <th>
+                    Last Mounth
+                    <p style="font-size: 12px; color: #7a7a7a">
+                      (Mar 1 to Mar 31)
+                    </p>
+                  </th>
+                  <th>
+                    This month
+                    <p style="font-size: 12px; color: #7a7a7a">
+                      (Apr 1 to Apr 31)
+                    </p>
+                  </th>
+                  <th>
+                    Difference
+                    <p></p>
+                  </th>
+                </tr>
+                <tr style="font-size: 20px">
+                  <td></td>
+                  <td>1152</td>
+                  <td>3240</td>
+                  <td style="color: #60ca9a">
+                    2088 <i class="fa fa-sort-up"></i>
+                  </td>
+                </tr>
+                <tr class="mean">
+                  <td>Mean</td>
+                  <td style="color: black">5.27</td>
+                  <td style="color: black">5.15</td>
+                  <td style="color: #e96560">
+                    5.15<i class="fa fa-sort-down"></i>
+                  </td>
+                </tr>
+                <tr class="mean">
+                  <td>Median</td>
+                  <td style="color: black">3.88</td>
+                  <td style="color: black">3.73</td>
+                  <td style="color: #e96560">
+                    3.73<i class="fa fa-sort-down"></i>
+                  </td>
+                </tr>
+                <tr class="mean">
+                  <td>Max</td>
+                  <td style="color: black">35.48</td>
+                  <td style="color: black">3.73</td>
+                  <td style="color: #60ca9a">
+                    51.57 <i class="fa fa-sort-up"></i>
+                  </td>
+                </tr>
+                <tr class="mean">
+                  <td>Min</td>
+                  <td style="color: black">0.13</td>
+                  <td style="color: black">0.10</td>
+                  <td style="color: #e96560">
+                    0.10 <i class="fa fa-sort-down"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <canvas
+                id="myChart"
+                style="width: 100%; max-width: 400px"
+              ></canvas>
+              <ul>
+                <li style="font-size: 18px">
+                  This Month : <span style="color: grey">(Apr 1 - Apr 31)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+                <div style="float: right;margin-top: 10px;">
+                  <select name="Current Month on Last Month" id="">
+                    <option value="" selected="selected">
+                      Current Month on Last Month
+                    </option>
+                  </select>
+                </div>  
+              </div>
+          </div>
+          <div>
+            <button class="collapsible" style="font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;">Drill Downs</button>
+            <div class="content">
+                <div class="exp1">
+            <div class="tab-container11">
+              <div class="w3-row1">
+                <a href="javascript:void(0)" onclick="opencity1(event, 'London1');">
+                  <div
+                    class="
+                      tab-third1
+                      tablink1
+                      tab-bottombar11 tab-hover-light-grey1 tab-padding1
+                    "
+                    style="color: #60ca9a"
+                  >
+                    Housing
+                  </div>
+                </a>
+                <a href="javascript:void(0)" onclick="opencity1(event, 'Paris1');">
+                  <div
+                    class="
+                      tab-third1
+                      tablink1
+                      tab-bottombar11 tab-hover-light-grey1 tab-padding1
+                    "
+                    style="color: black"
+                  >
+                    Loan
+                  </div>
+                </a>
+                <a href="javascript:void(0)" onclick="opencity1(event, 'London2');">
+                  <div
+                    class="
+                      tab-third1
+                      tablink1
+                      tab-bottombar11 tab-hover-light-grey1 tab-padding1
+                    "
+                    style="color: black"
+                  >
+                    Education
+                  </div>
+                </a>
+                <a href="javascript:void(0)" onclick="opencity1(event, 'Paris2');">
+                  <div
+                    class="
+                      tab-third1
+                      tablink1
+                      tab-bottombar11 tab-hover-light-grey1 tab-padding1
+                    "
+                    style="color: black"
+                  >
+                    Job
+                  </div>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="tablink1"
+                  onclick="opencity1(event, 'Tokyo1');"
+                >
+                  <div style="float: right; margin-top: 10px">
+                    <select name="Multidimentional" id="">
+                      <option value="" selected="selected">Multidimentional</option>
+                    </select>
+                  </div>
+                </a>
+              </div>
+        
+              <div id="London1" class="tab-container11 city1" style="display: none">
+                <div class="row1">
+                  <div class="column1">
+                    <div class="card1">
+                      <p style="margin-top: 50px; margin-left: 25px">
+                        <img
+                          class="img1"
+                          src="images/data2.png"
+                          alt="Avatar"
+                          style="width: 20%"
+                        />
+                      </p>
+                      <div class="container1">
+                        <h4><b>Add Data Source</b></h4>
+                        <p>Select the data You Want and analyse</p>
+                        <button
+                          style="background-color: black; color: white"
+                          class="btn1"
+                        >
+                          View Data Source
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column1">
+                    <div
+                      class="card1"
+                      style="
+                        background: linear-gradient(
+                          333.75deg,
+                          #222222 2.14%,
+                          rgba(34, 34, 34, 0.9) 103.46%
+                        );
+                      "
+                    >
+                      <p style="margin-top: 50px; margin-left: 25px">
+                        <img
+                          class="img1"
+                          src="images/meter.png"
+                          alt="Avatar"
+                          style="background: white"
+                        />
+                      </p>
+                      <div class="container1">
+                        <h4 style="color: white"><b>Add Data Source</b></h4>
+                        <p style="color: white">Select the data You Want and analyse</p>
+                        <button
+                          style="
+                            background: linear-gradient(
+                              101.44deg,
+                              #defb9d 0%,
+                              #71f79e 37%,
+                              #38f9d7 70%,
+                              #89c4fe 100%
+                            );
+                            color: black;
+                          "
+                          class="btn1"
+                        >
+                          Add KPI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column1">
+                    <div class="card1">
+                      <p style="margin-top: 50px; margin-left: 25px">
+                        <img
+                          class="img1"
+                          src="images/sqmenu2.png"
+                          alt="Avatar"
+                          style="width: 20%"
+                        />
+                      </p>
+                      <div class="container1">
+                        <h4><b>Create Dashboard</b></h4>
+                        <p>Select the data You Want and analyse</p>
+                        <button
+                          style="
+                            background-color: whitesmoke;
+                            color: rgb(124, 117, 117);
+                          "
+                          class="btn1"
+                        >
+                          Create Dashboard
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabl">
+                  <h2 style="font-weight: 600; font-size: 18px">
+                    Top Driveres
+                    <div style="float: right">
+                      <label class="switch">
+                        <input class="input" type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <span
+                        style="
+                          text-align: center;
+                          font-family: Inter;
+                          font-style: normal;
+                          font-weight: normal;
+                          font-size: 16px;
+                        "
+                        >Remove overlap</span
+                      >
+                    </div>
+                  </h2>
+                  <table class="table2">
+                    <tr style="background-color: black;color: white;">
+                      <th class="th2">Sub Group Name</th>
+                      <th class="th2">April Avg</th>
+                      <th class="th2">May Avg</th>
+                      <th class="th2">April Sub Group Population</th>
+                      <th class="th2">May Sub Group Population</th>
+                      <th class="th2">Net Impact on Overall Avg</th>
+                    </tr>
+                    <tr>
+                      <td class="td2"> Housing=yes</td>
+                      <td class="td2">0.27</td>
+                      <td class="td2">0.12</td>
+                      <td class="td2">2406</td>
+                      <td class="td2">889</td>
+                      <td class="td2" style="color: #E96560;"><i class="fa fa-sort-down"></i>0.16</i></td>
+                    </tr>
+                    <tr>
+                      <td class="td2">Housing=yes</td>
+                      <td class="td2">0.78</td>
+                      <td class="td2">0.89</td>
+                      <td class="td2">2839</td>
+                      <td class="td2">789</td>
+                      <td class="td2" style="color: #E96560;"><i class="fa fa-sort-down"></i>0.38</i></td>
+                    </tr>
+                    <tr>
+                      <td class="td2">Housing=yes</td>
+                      <td class="td2">0.89</td>
+                      <td class="td2">0.78</td>
+                      <td class="td2">2839</td>
+                      <td class="td2">796</td>
+                      <td class="td2" style="color: #E96560;"><i class="fa fa-sort-down"></i>0.48</i></td>
+                    </tr>
+                    <tr>
+                      <td class="td2">Housing=yes</td>
+                      <td class="td2">0.78</td>
+                      <td class="td2">0.89</td>
+                      <td class="td2">2839</td>
+                      <td class="td2">789</td>
+                      <td class="td2" style="color: #E96560;"><i class="fa fa-sort-down"></i>0.38</i></td>
+                    </tr>
+                    <tr>
+                      <td class="td2">Housing=yes</td>
+                      <td class="td2">0.89</td>
+                      <td class="td2">0.78</td>
+                      <td class="td2">2839</td>
+                      <td class="td2">796</td>
+                      <td class="td2" style="color: #E96560;"><i class="fa fa-sort-down"></i>0.48</i></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tabl">
+                  <h2 style="font-size:18px; font-weight: 600;">Forms</h2>
+                  <div>
+                    <p>KPI Name*</p>
+                    <input type="text" onfocus="this.value=''" placeholder="Name of Your KPI" class="in1">
+                    <p>Select Data Source*</p>
+                    <select class="in1">
+                      <option value="" selected="selected">
+                        select
+                      </option>
+                    </select>
+                    <p>Table Name or Query*</p>
+                    <input type="text" onfocus="this.value=''" placeholder="Enter Table Name or Query" class="in1">
+                    <p>Metric column1*</p>
+                    <input type="text" onfocus="this.value=''" placeholder="Enter Metric Colummn" class="in1">
+                    <p>Aggregate By*</p>
+                    <select class="in1">
+                      <option value="" selected="selected">
+                        select
+                      </option>
+                    </select>
+                    <p>
+                  </div>
+                </div>
+              </div>
+        
+              <div id="Paris1" class="tab-container11 city1" style="display: none">
+                <h2>Loan</h2>
+              </div>
+              <div id="London2" class="tab-container11 city1" style="display: none">
+                <h2>Education</h2>
+              </div>
+              <div id="Paris2" class="tab-container11 city1" style="display: none">
+                <h2>Job</h2>
+              </div>
+              <div id="Tokyo1" class="tab-container11 city1" style="display: none"></div>
+            </div>
+         </div>
+        </div>
+          </div>
+        </div>
+        <div id="Paris" class="tab-container city" style="display: none">
+          <!-- <h2>Anomolies</h2> -->
+        </div>
+
+        <div id="Tokyo" class="tab-container city" style="display: none">
+          <!-- <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p> -->
+        </div>
+        
+      </div>
+    </div>
+  </body>
+  <script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      console.log(x);
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      console.log(tablinks);
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(
+          " tab-border-colour",
+          ""
+        );
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " tab-border-colour";
+    }
+
+    var xValues = [1, 5, 10, 15, 20, 25, 30];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [750, 900, 950, 1000, 1600, 2100, 3300],
+            borderColor: "green",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+      function opencity1(evt, city1Name) {
+        var i, x, tablink1s;
+        x = document.getElementsByClassName("city1");
+        console.log(x);
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablink1s = document.getElementsByClassName("tablink1");
+        console.log(tablink1s);
+        for (i = 0; i < x.length; i++) {
+          tablink1s[i].className = tablink1s[i].className.replace(
+            " tab-border-colour1",
+            ""
+          );
+        }
+        document.getElementById(city1Name).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " tab-border-colour1";
+      }
+  </script>
+</html>
